@@ -1,0 +1,47 @@
+<!-- 
+a. Write JavaScript code to illustrate popup function . (alert, confirm, prompt)
+b. Write a function on JavaScript.
+c. Write a program on JavaScript using assignment operator.
+d. Display your full name on JavaScript using variable declaration.
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 14</title>
+</head>
+<body>
+    <!-- a. Write JavaScript code to illustrate popup function . (alert, confirm, prompt) -->
+    <!-- b. Write a function on JavaScript. -->
+    <button onclick="alert_button()">Alert</button>
+    <button onclick="confirm_button()">Confirm</button>
+    <button onclick="prompt_button()">Prompt</button>    
+    <br><br>
+    
+    <!-- c. Write a program on JavaScript using assignment operator. -->
+    A: <input type="number" id="numA">
+    B: <input type="number" id="numB">
+    <input type="submit" onclick="calculate()" value="Find Sum">
+    <br>
+    Sum: <p id="sum" style="display: inline;"></p>
+
+    <!-- d. Display your full name on JavaScript using variable declaration. -->
+    <p id="name"></p>
+
+    <script>
+        function alert_button(){alert("Hello World");}
+        function confirm_button(){confirm("Please confirm");}
+        function prompt_button(){prompt("Enter text");}
+
+        function calculate(){
+            const a = parseInt(document.getElementById("numA").value);
+            const b = parseInt(document.getElementById("numB").value);
+            const sum = a + b;
+            document.querySelector('#sum').innerText = sum;
+        }
+        
+        let name = 'Mandish Nanda Vaidya';
+        document.querySelector('#name').innerText=name;
+    </script>
+</body>
+</html>
