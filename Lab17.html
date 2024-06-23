@@ -44,14 +44,13 @@
     </form>
     <br>
 
-    <h2><u>JQuery</u></h2>
-    <h5>(Press JQuery to show text.)</h5>
+    <h2><u>JQuery</u><h5>(Press JQuery to show text.)</h5></h2>
+    
     <p>
       jQuery is a lightweight, "write less, do more", JavaScript library.The
       purpose of jQuery is to make it much easier to use JavaScript on your
       website.
     </p>
-    <button id="LearnMore">Learn more</button><br>
     <input id="inputText" placeholder="Enter text">
 
     <script>
@@ -67,13 +66,16 @@
 
     $("#LearnMore").click(()=>{location.href='https://jquery.com/';});
     $( "#inputText" ).on( "keypress", () => {
-        console.log( "Handler for `keypress` called." );
+        alert( "Handler for `keypress` called." );
     } );
 
     $("p").hide();
-
     $("h2").click(()=>{
-    $("p").show();
+      $("p").show();
+      $("p").animate({
+      left: '250px',
+      width: '350px'
+  });
     });
 
     //animate
